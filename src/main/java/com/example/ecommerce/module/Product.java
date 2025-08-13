@@ -35,10 +35,11 @@ public class Product {
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="category_id")
+	@JsonBackReference
 	private Category category;
 	
 	
-	@JsonBackReference
+
 	
 	// Define Many to many relationship
 	// There will be an additional table created, which is calling product_tag
